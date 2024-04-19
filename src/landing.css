@@ -9,13 +9,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
-#root{
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
-
   
 .custom-card {
     width: 100%;

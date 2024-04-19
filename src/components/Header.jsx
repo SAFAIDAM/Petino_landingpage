@@ -33,39 +33,41 @@ function Header() {
   };
 
   return (
-    <div className='bg-slate-100 mb-16'>
-      <div className='flex justify-between items-center w-10/12 mx-auto p-3'>
+    <div className='mb-16'>
+      <div className='flex items-center justify-between w-10/12 p-3 mx-auto'>
         <Link to='/'>
           <img src={logo} alt='Logo' className='logo' />
         </Link>
 
-        <div className='hidden md:flex gap-20 font-normal text-lg'>
+        <div className='hidden gap-20 text-lg font-normal md:flex'>
           <Link to='/'><div onClick={handleItemClick}>Home</div></Link>
           <Link to='/about'><div onClick={handleItemClick}>About</div></Link>
-          <Link to='/services'><div onClick={handleItemClick}>Services</div></Link>
-          <Link to='/join'><div onClick={handleItemClick}>Join Us</div></Link>
+          <Link to='/login'><div onClick={handleItemClick}>Services</div></Link>
+          <Link to='/login'><div onClick={handleItemClick}>Join Us</div></Link>
         </div>
 
         <div className='md:hidden'>
           <button onClick={toggleMenu}>
-            <img src={humburger} alt="Menu" className="block h-6 w-6" />
+            <img src={humburger} alt="Menu" className="block w-6 h-6" />
           </button>
         </div>
 
         {isOpen && (
-          <div ref={menuRef} className='md:hidden absolute top-16 right-0 bg-white shadow-lg transition-transform transform w-full'>
+          <div ref={menuRef} className='absolute right-0 w-full transition-transform transform bg-white shadow-lg md:hidden top-16'>
             <ul className='flex flex-col items-center'>
               <Link to='/'><li className='py-2' onClick={handleItemClick}>Home</li></Link>
               <Link to='/about'><li className='py-2' onClick={handleItemClick}>About</li></Link>
-              <Link to='/services'><li className='py-2' onClick={handleItemClick}>Services</li></Link>
-              <Link to='/join'><li className='py-2' onClick={handleItemClick}>Join Us</li></Link>
-              <Link to='/contact'><li className='py-2' onClick={handleItemClick}>Contact</li></Link>
+              <Link to='/login'><li className='py-2' onClick={handleItemClick}>Services</li></Link>
+              <Link to='/login'><li className='py-2' onClick={handleItemClick}>Join Us</li></Link>
             </ul>
           </div>
         )}
 
-        <div className='hidden md:flex relative'>
+        <div className='relative hidden md:flex'>
+          <Link to='signup'>
           <button className='btn-gradient-2' onClick={handleItemClick}>Find Hosts Now</button>
+          </Link>
+         
           <img className='absolute top-7 left-3/4' src={vector} alt="" />
         </div>
       </div>
