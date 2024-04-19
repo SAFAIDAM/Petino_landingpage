@@ -9,15 +9,15 @@ function Header() {
 
   
   return (
-    <div className='bg-slate-100 mb-16'>
-  <div className='flex justify-between items-center w-10/12 mx-auto p-3'>
+    <div className='mb-16'>
+  <div className='flex items-center justify-between w-10/12 p-3 mx-auto'>
     {/* Logo on the left */}
     <Link to='/'>
       <img src={logo} alt='Logo' className='logo' />
     </Link>
 
     {/* Button on the right */}
-    <div className=' md:flex relative'>
+    <div className='relative md:flex'>
       <button className='btn3 '>Continue</button>
       <img className='absolute top-7 left-3/4' src={vector} alt="" />
     </div>
