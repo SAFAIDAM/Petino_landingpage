@@ -9,7 +9,7 @@ function Header() {
 
   
   return (
-    <div className='mb-16'>
+    <div className='mb-16 '>
   <div className='flex items-center justify-between w-10/12 p-3 mx-auto'>
     {/* Logo on the left */}
     <Link to='/'>
